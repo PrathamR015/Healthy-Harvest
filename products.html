@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Healthy Harvest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Healthy Harvest</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Banner -->
+    <section class="product-banner">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Nutrient-rich dehydrated superfoods for your healthy lifestyle</p>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="product-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="category-btn active" data-filter="all">All Products</button>
+                <button class="category-btn" data-filter="fruits">Fruits</button>
+                <button class="category-btn" data-filter="vegetables">Vegetables</button>
+                <button class="category-btn" data-filter="mixes">Mix Packs</button>
+                <button class="category-btn" data-filter="snacks">Snacks</button>
+            </div>
+
+            <!-- Search and Sort -->
+            <div class="product-controls">
+                <div class="search-bar">
+                    <input type="text" id="product-search" placeholder="Search products...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="sort-options">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="default">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Product List -->
+            <div class="product-list">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="fruits" data-name="Mixed Berry Blend" data-price="12.99">
+                    <div class="product-image">
+                        <img src="./images/img-1.jpg" alt="Mixed Berry Blend">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="1">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Mixed Berry Blend</h3>
+                        <p class="product-description">A perfect mix of strawberries, blueberries, and raspberries packed with antioxidants.</p>
+                        <div class="product-details">
+                            <div class="product-price">$12.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(24)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="fruits" data-name="Tropical Fruit Mix" data-price="14.99">
+                    <div class="product-image">
+                        <img src="./images/img-2.jpg" alt="Tropical Fruit Mix">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="2">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tropical Fruit Mix</h3>
+                        <p class="product-description">Sweet mango, pineapple, and banana. A tropical paradise in every bite.</p>
+                        <div class="product-details">
+                            <div class="product-price">$14.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(37)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="vegetables" data-name="Veggie Crisps" data-price="9.99">
+                    <div class="product-image">
+                        <img src="./images/img-3.jpg" alt="Veggie Crisps">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="3">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Veggie Crisps</h3>
+                        <p class="product-description">Crunchy mix of kale, sweet potato, and beet chips. A nutritious alternative to regular snacks.</p>
+                        <div class="product-details">
+                            <div class="product-price">$9.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(19)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="fruits" data-name="Apple Cinnamon Chips" data-price="8.99">
+                    <div class="product-image">
+                        <img src="./images/img-2.jpg" alt="Apple Cinnamon Chips">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="4">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Apple Cinnamon Chips</h3>
+                        <p class="product-description">Sweet and tangy apple slices with a hint of cinnamon. A perfect healthy snack.</p>
+                        <div class="product-details">
+                            <div class="product-price">$8.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(42)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="vegetables" data-name="Green Superfood Mix" data-price="15.99">
+                    <div class="product-image">
+                        <img src="./images/img-3.jpg" alt="Green Superfood Mix">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="5">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Green Superfood Mix</h3>
+                        <p class="product-description">Blend of spinach, kale, and broccoli. Add to smoothies for an extra nutrient boost.</p>
+                        <div class="product-details">
+                            <div class="product-price">$15.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(16)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="mixes" data-name="Healthy Breakfast Mix" data-price="17.99">
+                    <div class="product-image">
+                        <img src="./images/img-1.jpg" alt="Healthy Breakfast Mix">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="6">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Healthy Breakfast Mix</h3>
+                        <p class="product-description">A nutritious blend of fruits, nuts, and seeds. Perfect for boosting your morning routine.</p>
+                        <div class="product-details">
+                            <div class="product-price">$17.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(31)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-category="snacks" data-name="Protein Bites Mix" data-price="13.99">
+                    <div class="product-image">
+                        <img src="./images/img-3.jpg" alt="Protein Bites Mix">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="7">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Protein Bites Mix</h3>
+                        <p class="product-description">High-protein blend of nuts, seeds, and berries for post-workout recovery.</p>
+                        <div class="product-details">
+                            <div class="product-price">$13.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span>(22)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-category="mixes" data-name="Immunity Booster Mix" data-price="16.99">
+                    <div class="product-image">
+                        <img src="./images/img-1.jpg" alt="Immunity Booster Mix">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="8">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Immunity Booster Mix</h3>
+                        <p class="product-description">A powerful blend of antioxidant-rich superfoods to support your immune system.</p>
+                        <div class="product-details">
+                            <div class="product-price">$16.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(28)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card" data-category="snacks" data-name="Crunchy Trail Mix" data-price="12.99">
+                    <div class="product-image">
+                        <img src="./images/img-2.jpg" alt="Crunchy Trail Mix">
+                        <div class="product-actions">
+                            <button class="quick-view-btn" data-product-id="9">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Crunchy Trail Mix</h3>
+                        <p class="product-description">A satisfying blend of dehydrated fruits, vegetables, and nuts for on-the-go energy.</p>
+                        <div class="product-details">
+                            <div class="product-price">$12.99</div>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(25)</span>
+                            </div>
+                        </div>
+                        <button class="btn add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Quick View Modal -->
+    <div class="product-modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-product-details">
+                <div class="modal-product-image">
+                    <img id="modal-image" src="/api/placeholder/800/800" alt="Product Image">
+                </div>
+                <div class="modal-product-info">
+                    <h2 id="modal-title">Product Name</h2>
+                    <div class="modal-product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span id="modal-reviews">(24 reviews)</span>
+                    </div>
+                    <div class="modal-product-price" id="modal-price">$12.99</div>
+                    <p class="modal-product-description" id="modal-description">
+                        Product description will go here.
+                    </p>
+                    
+                    <div class="modal-nutritional-info">
+                        <h3>Nutritional Information</h3>
+                        <div class="nutrition-table">
+                            <div class="nutrition-row">
+                                <div class="nutrition-label">Calories:</div>
+                                <div class="nutrition-value" id="modal-calories">120 kcal</div>
+                            </div>
+                            <div class="nutrition-row">
+                                <div class="nutrition-label">Protein:</div>
+                                <div class="nutrition-value" id="modal-protein">2g</div>
+                            </div>
+                            <div class="nutrition-row">
+                                <div class="nutrition-label">Carbohydrates:</div>
+                                <div class="nutrition-value" id="modal-carbs">25g</div>
+                            </div>
+                            <div class="nutrition-row">
+                                <div class="nutrition-label">Fat:</div>
+                                <div class="nutrition-value" id="modal-fat">0.5g</div>
+                            </div>
+                            <div class="nutrition-row">
+                                <div class="nutrition-label">Fiber:</div>
+                                <div class="nutrition-value" id="modal-fiber">3g</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-benefits">
+                        <h3>Health Benefits</h3>
+                        <ul id="modal-benefits-list">
+                            <li>Rich in antioxidants</li>
+                            <li>Supports immune function</li>
+                            <li>Promotes digestive health</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="modal-quantity">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="99">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button class="btn primary-btn modal-add-to-cart">Add to Cart</button>
+                        <button class="btn secondary-btn modal-wishlist">
+                            <i class="far fa-heart"></i> Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Healthy Harvest</h3>
+                    <p>Premium dehydrated superfoods for your healthy lifestyle.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Health Street, Wellness City</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@Healthy Harvest.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Healthy Harvest. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Order Button -->
+    <div class="fixed-order-btn">
+        <a href="https://wa.me/1234567890?text=I'm%20interested%20in%20ordering%20Healthy Harvest%20products" target="_blank">
+            <i class="fab fa-whatsapp"></i> Order Now
+        </a>
+    </div>
+
+    <script src="product-script.js"></script>
+</body>
+</html>
